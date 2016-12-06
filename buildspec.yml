@@ -8,6 +8,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - mvn test -Dtest=AppTest
       - mvn package
 artifacts:
   files:
