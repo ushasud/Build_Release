@@ -14,4 +14,4 @@ phases:
       - tar -cvzf artifact.tar.gz target/
 artifacts:
   files:
-    - target/artifact.tar.gz
+    - artifact.tar.gz
