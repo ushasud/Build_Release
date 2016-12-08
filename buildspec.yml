@@ -11,7 +11,7 @@ phases:
       - mvn test -Dtest=AppTest
       - mvn package
       - cp appspec.yml target/
-      - tar -cvzf target/artifact.tar.gz target/build-deploy-0.0.1-SNAPSHOT.jar
+      - tar -cvzf artifact.tar.gz target/
 artifacts:
   files:
     - target/artifact.tar.gz
