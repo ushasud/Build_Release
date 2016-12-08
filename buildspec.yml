@@ -12,5 +12,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/build-deploy-0.0.1-SNAPSHOT.jar
     - target/tar -cvzf arch.tar.gz build-deploy-0.0.1-SNAPSHOT.jar
