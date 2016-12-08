@@ -1,0 +1,13 @@
+
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: tar -xvzf target/artifact.tar.gz
+  AfterInstall:
+      timeout: 180
+  ApplicationStart:
+      timeout: 3600
+  ValidateService:
+      timeout: 3600
+     
