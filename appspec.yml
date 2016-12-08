@@ -1,17 +1,13 @@
-version: 0.1
 
-phases:
-  build:
-    commands:
-      - echo Build started on `date`
-      - mvn clean install
-  post_build:
-    commands:
-      - echo Build completed on `date`
-      - mvn test -Dtest=AppTest
-      - mvn package
-      - tar -cvzf target/artifact.tar.gz target/build-deploy-0.0.1-SNAPSHOT.jar
-artifacts:
-  files:
-    - target/artifact.tar.gz
-    
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: tar -xvzf target/artifact.tar.gz
+  AfterInstall:
+      timeout: 180
+  ApplicationStart:
+      timeout: 3600
+  ValidateService:
+      timeout: 3600
+     
