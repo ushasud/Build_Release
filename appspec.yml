@@ -3,6 +3,7 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
+    - location: sudo su
     - location: sudo tar -xvzf artifact.tar.gz -C ../ --strip 1
   AfterInstall:
       timeout: 180
