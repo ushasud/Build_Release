@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-    - location: tar -xvzf artifact.tar.gz --strip 1
+    - location: tar -xvzf artifact.tar.gz -C ../ --strip 1
   AfterInstall:
       timeout: 180
   ApplicationStart:
