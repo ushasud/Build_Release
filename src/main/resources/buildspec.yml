@@ -10,10 +10,8 @@ phases:
       - echo Build completed on `date`
       - mvn test -Dtest=AppTest
       - mvn package
-      - mkdir target/deploy
-      - cp target/build-deploy-0.0.1-SNAPSHOT.jar target/deploy/build-deploy-0.0.1-SNAPSHOT.jar
-      - cp appspec.yml target/deploy/appspec.yml
-      - tar -cvzf target/artifact.tar.gz target/deploy/*
+      - cp appspec.yml target/
+      - tar -cvzf artifact.tar.gz target/
 artifacts:
   files:
-    - target/artifact.tar.gz
+    - artifact.tar.gz
